@@ -25,12 +25,11 @@ bool isPrime(long n) {
 
 long * primeFactorsOf(long n) {
     static long factors[MAXFACTORS] = {0};
-    int j = 0;
-    for (long i = 2; i < (int)ceil(sqrt(n)); i++) {
-        //printf("Checking if %ld is a prime factor of %ld\n", i, n);
-        if ((n % i == 0) && isPrime(i)) {
-            factors[j] = i;
-            j++;
+    int index = 0;
+    for (long div = 2; div <= (int)ceil(sqrt(n)); div++)
+        if ((n % div == 0) && isPrime(div)) {
+            factors[index] = div;
+            index++;
         }
     }
 
@@ -41,13 +40,12 @@ long largestPrimeFactor(long n) {
     long *factors = primeFactorsOf(n);
 
     long largest = factors[0];
-    int i = 0;
-    while(i < MAXFACTORS) {
-        //printf("Checking if %ld is greater than %ld\n", *(factors + i), largest);
-        if (*(factors + i) > largest) {
-            largest = *(factors + i);
+    int index = 0;
+    while(index < MAXFACTORS) {
+        if (*(factors + index) > largest) {
+            largest = *(factors + index);
         }
-        i++;
+        index++;
     }
 
     return largest;
