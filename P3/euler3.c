@@ -9,24 +9,13 @@ typedef int bool;
 #define false 0
 
 bool isPrime(long n) {
-    printf("Checking if %ld is prime\n", n);
-    if (n % 2 == 0) {
-        return false;
-    } else if (n % 3 == 0) {
-        return false;
-    } else if (n % 5 == 0) {
-        return false;
-    } else if (n % 7 == 0) {
-        return false;
-    } else if (n % 11 == 0) {
-        return false;
-    } else if (n % 13 == 0) {
-        return false;
-    } else if (n % 17 == 0) {
+    if (n == 2) {
+        return true;
+    } else if (n % 2 == 0){// Check for divisiblity by two
         return false;
     } else {
-        for (long i = 19; i < (int)ceil(sqrt(n)); i++) {
-            if (n % i == 0) {
+        for (long div = 3; div <= (int)ceil(sqrt(n)); div += 2) {
+            if (n % div == 0) {
                 return false;
             }
         }
