@@ -6,7 +6,6 @@ What is the smallest positive number that is evenly divisible by all of the numb
 */
 
 #include <stdio.h>
-#include <math.h>
 #include <stdbool.h>
 
 int smallestCommonMultiple(int lowerBound, int upperBound) {
