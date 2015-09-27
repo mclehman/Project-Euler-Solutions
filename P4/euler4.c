@@ -8,11 +8,7 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 
 #include <stdio.h>
 #include <math.h>
-
-// Define boolean type for clarity
-typedef int bool;
-#define true 1
-#define false 0
+#include <stdbool.h>
 
 // Returns the number of digits in the decimal representation of an integer
 int digitLength(int n) {

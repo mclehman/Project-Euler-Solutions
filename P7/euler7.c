@@ -8,14 +8,10 @@ What is the 10,001st prime number?
 
 #include <stdio.h>
 #include <math.h>
+#include <stdbool.h>
 
 // Hardcode requested prime index
 #define TARGET 10001
-
-// Define boolean type for clarity
-typedef int   bool;
-#define true  1
-#define false 0
 
 // Determines if the requested number is prime
 bool isPrime(long n) {

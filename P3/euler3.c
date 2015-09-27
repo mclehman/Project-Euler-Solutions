@@ -7,16 +7,12 @@ What is the largest prime factor of the number 600851475143?
 
 #include <stdio.h>
 #include <math.h>
+#include <stdbool.h>
 
 // Hardcode target number rather than deal with I/O
 #define  TARGET 600851475143
 // Assume maximum of 100 prime factors
 #define  MAXFACTORS 100
-
-// Define boolean type for clarity
-typedef int bool;
-#define true 1
-#define false 0
 
 // Determines if the requested number is prime
 bool isPrime(long n) {
