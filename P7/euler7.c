@@ -56,6 +56,6 @@ int * firstnPrimes() {
 // Prints the TARGET-th prime, conveniently located in the (TARGET - 1)-th index of primes.
 int main() {
     int *primes = firstnPrimes();
-    printf("%d\n", *(primes + TARGET - 1));
+    printf("Prime #%d is %d\n",TARGET, *(primes + TARGET - 1));
     return 0;
 }
