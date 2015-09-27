@@ -34,6 +34,7 @@ bool isPrime(long n) {
             }
         }
     }
+
     return true;
 }
 
@@ -43,7 +44,7 @@ long * primeFactorsOf(long n) {
     static long factors[MAXFACTORS] = {0};
     int index = 0;
     // Loop through integers > 1 up to the square root of the number
-    for (long div = 2; div <= (int)ceil(sqrt(n)); div++)
+    for (long div = 2; div <= (int)ceil(sqrt(n)); div++) {
         // check for divisibility and do not check primehood if unnecessary
         if ((n % div == 0) && isPrime(div)) {
             // Add prime factors to array and increment index
@@ -75,6 +76,6 @@ long largestPrimeFactor(long n) {
 
 // Prints out the largest prime factor of TARGET
 int main() {
-    printf("%ld\n", largestPrimeFactor(TARGET));
+    printf("The largest prime factor of %ld is %ld.\n", TARGET, largestPrimeFactor(TARGET));
     return 0;
 }
