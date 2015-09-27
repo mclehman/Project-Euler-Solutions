@@ -14,7 +14,6 @@ one hundred natural numbers and the square of the sum.
 */
 
 #include <stdio.h>
-#include <stdbool.h>
 
 // Returns the sum of the squares of all numbers from 1 to upperLimit
 long sumSquares(int upperLimit) {
