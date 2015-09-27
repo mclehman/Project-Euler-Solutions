@@ -1,1 +1,4 @@
+# Compiled C binaries
 *.a
+# Shell scripts
+*.sh
