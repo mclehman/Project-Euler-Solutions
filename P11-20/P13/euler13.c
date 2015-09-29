@@ -109,13 +109,14 @@ Work out the first ten digits of the sum of the following one-hundred 50-digit n
 "20849603980134001723930671666823555245252804609722 "\
 "53503534226472524250874054075591789781264330331690 "
 
-// Returns the first X digits of the sum of the given numbers
+/*// Returns the first X digits of the sum of the given numbers
 long partialSum(int numCount, int numLength, int resultLength, char* str) {
 	long result = 0;
 
 	// Correctly set to last 10 digits of respective numbers
-	// result = strtol((str + 1 + numLength - resultLength), &str, 10);
-	// result = strtol((str + 1 + numLength - resultLength), &str, 10);
+	//result = strtol((str + 1 + numLength - resultLength), &str, 10);
+	//result = strtol((str + 1 + numLength - resultLength), &str, 10);
+	//result = strtol((str + 1 + numLength - resultLength), &str, 10);
 
 	for (int i = 0; i < numCount; i++) {
 		// address plus one padding space plus length of number minus desired digits
@@ -125,8 +126,8 @@ long partialSum(int numCount, int numLength, int resultLength, char* str) {
 	//result = result - (result / pow(10, resultLength - 1));
 
 	return result;
-}
-
+}//
+*/
 // Prints the first resultLength digits of the sum of the given numbers
 int main() {
 	int    numCount  = 100;
@@ -135,7 +136,7 @@ int main() {
 
 	char *str = TARGET;
 
-	printf("The rightmost %d digits of the sum of the %d %d-digit numbers given are \"%ld\"\n",
+	printf("The first %d digits of the sum of the %d %d-digit numbers given are \"%ld\"\n",
 	       resultLength, numCount, numLength, partialSum(numCount, numLength, resultLength, str));
 
 	return 0;
